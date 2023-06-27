@@ -9,8 +9,8 @@ ${browser}   edge
 
 
 *** Keywords ***
-start browser and Maximize
-     Open Browser   ${url}   ${browser}
+start browser and maximize
+      Open Browser   ${url}   ${browser}
       Maximize Browser Window
       Sleep    3
 Enter username password click
@@ -76,3 +76,38 @@ create login credentials
       Sleep    3
       Click Button    ${save_button2}
       Sleep    3
+Enter into the leave module
+      Click Element    ${leave_button}
+      Sleep    3
+      Click Element    ${entitle} 
+      Sleep    2
+      Click Element    ${add_entitle}
+      Sleep    3
+Add entitlement
+      Click Element    ${mul_employee}  
+      Sleep    2
+
+      Sleep    2
+      Click Element    ${select}
+      Sleep    5
+      Click Element    ${select2}
+      sleep  3
+      Click Element    ${subunit}
+      Sleep    2
+      Click Element    ${leave_type}
+      Sleep    3
+      Click Element    ${leave_period}
+      Sleep    3
+      Input Text    ${entitlement}    mypersonalleave
+      sleep    3
+      Click Button    ${save}
+Generating the leave reports
+      Click Element    ${leave_button}
+      Sleep    3
+      Click Element    ${reports}
+      Click Element    ${leave_report}
+      Sleep    2
+      Click Element    ${select3}
+      Sleep    5
+      Click Button    ${generate}
+      Sleep    2

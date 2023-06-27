@@ -2,7 +2,8 @@
 Library  SeleniumLibrary
 Library    String
 Resource   Resources.robot
-Test Setup  start browser and Maximize
+Resource    orangeHRM.robot
+Test Setup  start browser and maximize
 Test Teardown  Close Browser
 
 *** Variables ***
@@ -25,3 +26,14 @@ test_case2
    Sleep    3
    create login credentials
    Sleep    3
+test_case3
+   Enter username password click
+   Sleep    3
+   Enter into the leave module
+   sleep  3
+   Add entitlement
+
+test_case4
+   Enter username password click
+   Sleep    3
+   Generating the leave reports
